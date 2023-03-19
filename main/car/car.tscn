@@ -65,6 +65,10 @@ script = ExtResource("2_vfvk0")
 
 [node name="Headlight" type="SpotLight3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.692163, 0, 3.39649)
+light_energy = 1.175
+light_indirect_energy = 1.057
 
 [node name="Headlight2" type="SpotLight3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.471659, 0, 3.39649)
+light_energy = 1.175
+light_indirect_energy = 1.057
