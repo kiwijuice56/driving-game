@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b64utrjhpday1"]
+
+[ext_resource type="PackedScene" uid="uid://fpta1t337nol" path="res://main/car/car.tscn" id="1_ocd4t"]
+[ext_resource type="PackedScene" uid="uid://dwcpumx2geucs" path="res://main/car/sports/wheel_sports.glb" id="2_u7tvv"]
+[ext_resource type="PackedScene" uid="uid://b52ixtv3bion8" path="res://main/car/sports/body_sports.glb" id="3_xqwei"]
+
+[node name="SportsCar" instance=ExtResource("1_ocd4t")]
+
+[node name="body_sports" parent="Body" index="0" instance=ExtResource("3_xqwei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.097, 0)
+
+[node name="wheel_sports" parent="Wheel" index="0" instance=ExtResource("2_u7tvv")]
+
+[node name="wheel_sports" parent="Wheel2" index="0" instance=ExtResource("2_u7tvv")]
+
+[node name="wheel_sports" parent="Wheel3" index="0" instance=ExtResource("2_u7tvv")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="wheel_sports" parent="Wheel4" index="0" instance=ExtResource("2_u7tvv")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
