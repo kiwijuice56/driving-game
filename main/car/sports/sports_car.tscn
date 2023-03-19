@@ -5,16 +5,73 @@
 [ext_resource type="PackedScene" uid="uid://b52ixtv3bion8" path="res://main/car/sports/body_sports.glb" id="3_xqwei"]
 
 [node name="SportsCar" instance=ExtResource("1_ocd4t")]
+mass = 85.0
+
+[node name="Body" parent="." index="0"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
 [node name="body_sports" parent="Body" index="0" instance=ExtResource("3_xqwei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.097, 0)
 
+[node name="Wheel" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, -0.171921, 1.15718)
+wheel_roll_influence = 0.1
+wheel_radius = 0.4
+wheel_rest_length = 0.15
+suspension_stiffness = 16.0
+
 [node name="wheel_sports" parent="Wheel" index="0" instance=ExtResource("2_u7tvv")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+
+[node name="Wheel2" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, -0.110586, -1.10465)
+wheel_roll_influence = 0.1
+wheel_radius = 0.4
+wheel_rest_length = 0.15
+suspension_stiffness = 16.0
 
 [node name="wheel_sports" parent="Wheel2" index="0" instance=ExtResource("2_u7tvv")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+
+[node name="Wheel3" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, -0.171921, 1.15718)
+wheel_roll_influence = 0.1
+wheel_radius = 0.4
+wheel_rest_length = 0.15
+suspension_stiffness = 16.0
 
 [node name="wheel_sports" parent="Wheel3" index="0" instance=ExtResource("2_u7tvv")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.7, 0, -1.05697e-07, 0, 0.7, 0, 1.05697e-07, 0, -0.7, 0, 0, 0)
+
+[node name="Wheel4" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, -0.110586, -1.10465)
+wheel_roll_influence = 0.1
+wheel_radius = 0.4
+wheel_rest_length = 0.15
+suspension_stiffness = 16.0
 
 [node name="wheel_sports" parent="Wheel4" index="0" instance=ExtResource("2_u7tvv")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.7, 0, -1.05697e-07, 0, 0.7, 0, 1.05697e-07, 0, -0.7, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.0572472, 0.257449, -0.312869)
+
+[node name="CameraPivot" parent="." index="6"]
+transform = Transform3D(-1, -3.79117e-08, 7.87747e-08, 0, 0.901077, 0.433659, -8.74228e-08, 0.433659, -0.901077, -2.75984e-07, 3.06863, -3.25379)
+
+[node name="CarCamera" parent="CameraHolder" index="0"]
+transform = Transform3D(-0.114989, 0, -0.993367, 0, 1, 0, 0.993367, 0, -0.114989, -7.81896, 1.84428, -12.6032)
+
+[node name="Headlight" parent="." index="8"]
+transform = Transform3D(-0.992955, -0.0423937, 0.110647, -1.56391e-08, 0.933805, 0.357781, -0.118491, 0.355261, -0.927227, -0.553725, 0.228086, 1.77549)
+light_color = Color(1, 0.972549, 0.890196, 1)
+light_energy = 1.5
+spot_range = 2.312
+spot_angle = 28.95
+
+[node name="Headlight2" parent="." index="9"]
+transform = Transform3D(-0.965377, 0.0933303, -0.243591, -1.56391e-08, 0.933805, 0.357781, 0.260858, 0.345394, -0.901474, 0.554, 0.228092, 1.77498)
+light_color = Color(1, 0.972549, 0.890196, 1)
+light_energy = 1.5
+spot_range = 2.312
+spot_angle = 28.95

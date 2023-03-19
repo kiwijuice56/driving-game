@@ -35,3 +35,8 @@ func _physics_process(delta):
 	else:
 		brake = 0.0
 	steering = move_toward(steering, steer_target, STEER_SPEED * delta)
+
+func get_mph() -> float:
+	var rpm: float = $Wheel.get_rpm()
+	var circum: float = $Wheel.wheel_radius * 2 * PI
+	return (circum * rpm * 60) / 1609.34

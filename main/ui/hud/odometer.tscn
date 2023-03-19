@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://3cdbqsbtugrd"]
+[gd_scene load_steps=4 format=3 uid="uid://3cdbqsbtugrd"]
 
-[ext_resource type="Texture2D" uid="uid://cauiwuchunwb7" path="res://icon.svg" id="1_lv8ko"]
+[ext_resource type="Texture2D" uid="uid://dg61wh00g7sur" path="res://main/ui/hud/odometer.png" id="1_05nof"]
 [ext_resource type="Script" path="res://main/ui/hud/odometer.gd" id="2_046jk"]
+[ext_resource type="Texture2D" uid="uid://c5mi381cttvxb" path="res://main/ui/hud/needle.png" id="3_ixaxg"]
 
 [node name="Odometer" type="TextureRect"]
 anchors_preset = 2
@@ -10,17 +11,19 @@ anchor_bottom = 1.0
 offset_top = -128.0
 offset_right = 128.0
 grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(0, 282)
 size_flags_horizontal = 0
 size_flags_vertical = 8
-texture = ExtResource("1_lv8ko")
+texture = ExtResource("1_05nof")
 script = ExtResource("2_046jk")
 
 [node name="Needle" type="TextureRect" parent="."]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 64.0
-offset_top = 64.0
-offset_right = 192.0
-offset_bottom = 192.0
-scale = Vector2(0.05, 0.5)
-texture = ExtResource("1_lv8ko")
+layout_mode = 1
+offset_left = 197.0
+offset_top = 200.0
+offset_right = 212.0
+offset_bottom = 379.0
+pivot_offset = Vector2(8, 0)
+texture = ExtResource("3_ixaxg")

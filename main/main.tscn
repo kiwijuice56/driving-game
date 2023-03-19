@@ -16,6 +16,7 @@ data = PackedVector3Array(0.9697, 0.0084, -0.9697, 1, 0.0089, -1, 1, 0.0088, -0.
 script = ExtResource("1_sppti")
 
 [node name="Landscape" parent="." instance=ExtResource("1_yrxmo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.94533, 0)
 
 [node name="Plane" parent="Landscape" index="0"]
 material_override = SubResource("StandardMaterial3D_71s7f")
@@ -41,16 +42,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
 
 [node name="Control" type="Control" parent="HUD/MarginContainer"]
 layout_mode = 2
 
-[node name="Odometer" parent="HUD/MarginContainer/Control" node_paths=PackedStringArray("car") instance=ExtResource("5_018ip")]
+[node name="Odometer" parent="HUD/MarginContainer/Control" node_paths=PackedStringArray("main") instance=ExtResource("5_018ip")]
 layout_mode = 1
-car = NodePath("../../../../SportsCar")
+anchors_preset = 3
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -408.0
+offset_top = -282.0
+offset_right = 0.0
+grow_horizontal = 0
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(408, 282)
+main = NodePath("../../../..")
 
 [editable path="Landscape"]
